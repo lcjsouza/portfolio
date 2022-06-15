@@ -1,0 +1,23 @@
+<ng-container *ngIf="modalFormacao">
+  <div class="bgescuro-modal">
+    <div class="modal-geral">
+      <div class="header-modal">
+        <h1>Formação acadêmica</h1>
+        <span (click)="fecharModal()">X</span>
+      </div>
+      <div class="conteudo"></div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="modalCursos">
+  <div class="bgescuro-modal">
+    <div class="modal-geral">
+      <div class="header-modal">
+        <h1>Cursos</h1>
+        <span (click)="fecharModal()">X</span>
+      </div>
+      <div class="conteudo"></div>
+    </div>
+  </div>
+</ng-container>
