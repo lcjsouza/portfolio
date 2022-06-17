@@ -1,1 +1,33 @@
-<p>experiencias works!</p>
+<div id="experiencias" class="box-experiencias">
+  <h1 class="titulo">EXPERIÊNCIAS</h1>
+  <div class="lista-empresas">
+    <ng-container *ngFor="let empresas of listaEmpresas">
+      <div class="box-empresas">
+        <div class="info-empresa">
+          <img class="logo-empresas" [src]="empresas.logo" />
+          <h2 class="nome-empresa">{{ empresas.empresa }}</h2>
+          <div class="info-cargo">
+            <label>Cargo:</label>
+            <p>{{ empresas.cargo }}</p>
+          </div>
+          <div class="info-cargo">
+            <label>Período:</label>
+            <p>{{ empresas.periodo }}</p>
+          </div>
+        </div>
+        <a  class="link-atividade">Ver Atividade</a>
+        <!-- Atividade Desktop -->
+        <div class="atividades-mobile">
+          <h2>Atividades</h2>
+          <p>{{ empresas.atividades }}</p>
+        </div>
+      </div>
+      <!-- Atividade Desktop -->
+      <div class="atividades-desktop">
+        <h2>Atividades</h2>
+        <p>{{ empresas.atividades }}</p>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
