@@ -10,7 +10,11 @@ export class ExperienciasComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {    
+  ngOnInit() {   
+    const atual = document.querySelectorAll(".cards"); 
+    // atual[0].classList.add('empresa-atual');
+    console.log(atual);
+    
   }
 
   verAtividade(empresa: string) {
