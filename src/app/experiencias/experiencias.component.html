@@ -1,33 +1,36 @@
 <div id="experiencias" class="box-experiencias">
   <h1 class="titulo">EXPERIÊNCIAS</h1>
   <div class="lista-empresas">
-    <ng-container *ngFor="let empresas of listaEmpresas">
-      <div class="box-empresas">
-        <div class="info-empresa">
-          <img class="logo-empresas" [src]="empresas.logo" />
-          <h2 class="nome-empresa">{{ empresas.empresa }}</h2>
-          <div class="info-cargo">
-            <label>Cargo:</label>
-            <p>{{ empresas.cargo }}</p>
-          </div>
-          <div class="info-cargo">
-            <label>Período:</label>
-            <p>{{ empresas.periodo }}</p>
+    <ng-container *ngFor="let empresa of listaEmpresas">
+      <div class="cards">
+        <div class="box-empresas">
+          <div class="info-empresa">
+            <img class="logo-empresas" [src]="empresa.logo" />
+            <h2 class="nome-empresa">{{ empresa.nome }}</h2>
+            <div class="info-cargo">
+              <label>Cargo:</label>
+              <p>{{ empresa.cargo }}</p>
+            </div>
+            <div class="info-cargo">
+              <label>Período:</label>
+              <p>{{ empresa.periodo }}</p>
+            </div>
           </div>
         </div>
-        <a  class="link-atividade">Ver Atividade</a>
-        <!-- Atividade Desktop -->
-        <div class="atividades-mobile">
-          <h2>Atividades</h2>
-          <p>{{ empresas.atividades }}</p>
-        </div>
-      </div>
-      <!-- Atividade Desktop -->
-      <div class="atividades-desktop">
+        <a (click)="verAtividade(empresa.nome)" id="verAtividades" class="link-atividade">Ver Atividade</a>       
+        <!-- Atividade Mobile -->
+        <div [id]="empresa.nome" class="atividades-mobile">
         <h2>Atividades</h2>
-        <p>{{ empresas.atividades }}</p>
+        <p>{{ empresa.atividades }}</p>
       </div>
+    </div>
     </ng-container>
   </div>
 </div>
 
+
+ <!-- Atividade Desktop -->
+ <!-- <div class="atividades-desktop">
+  <h2>Atividades</h2>
+  <p>{{ empresa.atividades }}</p>
+</div> -->
