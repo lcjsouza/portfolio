@@ -1,0 +1,131 @@
+@import '../app.component.scss';
+
+.box-experiencias {
+  background-color: $color-bgcinza;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 4rem 3rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .titulo {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: $color-texto;
+    margin-bottom: 3rem;
+  }
+
+  .lista-empresas {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+
+    .box-empresas {
+      border: 3px solid $color-bordas;
+      border-radius: 1rem;
+      padding: 3rem;
+      margin: 0 2rem;
+
+      .info-empresa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .logo-empresas {
+          width: 25rem;
+        }
+
+        .nome-empresa {
+          font-weight: 700;
+          font-size: 2.5rem;
+          line-height: 2.5rem;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          color: $color-texto;
+          margin: 3.8rem 0;
+        }
+
+        .info-cargo {
+          font-weight: 700;
+          line-height: 3rem;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+
+          label {
+            color: $color-texto;
+            font-size: 2rem;
+          }
+
+          p {
+            color: $color-subtexto;
+            font-size: 1.8rem;
+          }
+        }
+      }
+
+      .link-atividade {
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        text-decoration-line: underline;
+        margin-top: 3rem;
+      }
+
+      .atividades-mobile {
+        display: none;
+        font-weight: 700;
+        line-height: 3rem;
+
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+
+        h2 {
+          color: $color-texto;
+          font-size: 2rem;
+        }
+
+        p {
+          color: $color-subtexto;
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    .atividades-desktop {
+      display: none;
+      background-color: #000000b8;
+      position: absolute;
+      right: 6rem;
+      width: 31.5rem;
+      border: 3px solid;
+      border-radius: 1rem;
+      height: 60.5rem;
+      padding: 2rem;
+    }
+  }
+
+  .empresa-atual {
+    border: 3px solid #28C18D;
+  }
+
+
+}
+
+.display-none{
+    display: none;
+}
