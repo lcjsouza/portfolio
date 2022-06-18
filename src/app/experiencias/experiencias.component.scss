@@ -33,7 +33,7 @@
     .lista-empresas {
       display: flex;
       flex-direction: row;
-      overflow: hidden;
+      overflow: auto;
 
       .cards {
         display: flex;
@@ -160,10 +160,12 @@
 
       .lista-empresas {
         width: 100%;
+        overflow: hidden;
+
         .cards {
           flex-direction: row;
           padding: 0;
-          margin: 0 0 0 3rem;
+          margin: 0 0 0 8rem;
 
           .box-empresas {
             width: 32rem;
