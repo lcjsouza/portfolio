@@ -7,7 +7,7 @@ import * as $ from 'jquery';
   styleUrls: ['./experiencias.component.scss']
 })
 export class ExperienciasComponent implements OnInit {
-  valorCarrousel = 107;
+  valorCarrousel = 112;
   index = 0;
 
   constructor() { }
