@@ -2,7 +2,6 @@
 
 .box-experiencias {
   background-color: $color-bgcinza;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 4rem 3rem;
   display: flex;
   justify-content: center;
@@ -22,113 +21,193 @@
     margin-bottom: 3rem;
   }
 
-  .lista-empresas {
+  .experiencias-flex {
     display: flex;
-    flex-direction: row;
-    overflow: auto;
+    align-items: center;
 
-    .cards {
+    #seta-esq,
+    #seta-dir {
+      display: none;
+    }
+
+    .lista-empresas {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      border: 3px solid $color-bordas;
-      border-radius: 1rem;
-      padding: 3rem;
-      margin: 0 2rem;
+      flex-direction: row;
+      overflow: hidden;
 
-      .box-empresas {
+      .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border: 3px solid $color-bordas;
+        border-radius: 1rem;
+        padding: 3rem;
+        margin: 0 2rem;
 
-        .info-empresa {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: space-evenly;
-          height: 55rem;
-
-          .logo-empresas {
-            width: 25rem;
-          }
-
-          .nome-empresa {
-            font-weight: 700;
-            font-size: 2.5rem;
-            line-height: 2.5rem;
+        .box-empresas {
+          .info-empresa {
             display: flex;
-            align-items: center;
-            text-align: center;
-            color: $color-texto;
-            margin: 3.8rem 0;
-          }
-
-          .info-cargo {
-            font-weight: 700;
-            line-height: 3rem;
-            display: flex;
-            align-items: center;
-            text-align: center;
             flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 55rem;
 
-            label {
-              color: $color-texto;
-              font-size: 2rem;
+            .logo-empresas {
+              width: 25rem;
             }
 
-            p {
-              color: $color-subtexto;
-              font-size: 1.8rem;
+            .nome-empresa {
+              font-weight: 700;
+              font-size: 2.5rem;
+              line-height: 2.5rem;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              color: $color-texto;
+              margin: 3.8rem 0;
+            }
+
+            .info-cargo {
+              font-weight: 700;
+              line-height: 3rem;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              flex-direction: column;
+
+              label {
+                color: $color-texto;
+                font-size: 2rem;
+              }
+
+              p {
+                color: $color-subtexto;
+                font-size: 1.8rem;
+              }
             }
           }
         }
 
+        .link-atividade {
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 2.5rem;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+          text-decoration-line: underline;
+          margin-top: 3rem;
+        }
+
+        .atividades-mobile {
+          display: none;
+          font-weight: 700;
+          line-height: 3rem;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+
+          h2 {
+            color: $color-texto;
+            font-size: 2rem;
+          }
+
+          p {
+            color: $color-subtexto;
+            font-size: 1.8rem;
+          }
+        }
+
+        .atividades-desktop {
+          display: none;
+        }
+      }
+    }
+
+  }
+
+  @include fromMediumLarge {
+    padding: 6rem;
+    height: 84rem;
+
+    .titulo {
+      font-size: 5rem;
+      line-height: 6rem;
+      margin-bottom: 6rem;
+    }
+
+    .experiencias-flex {
+
+      #seta-esq {
+        display: block;
+        width: 3rem;
+
+        &:hover{
+          width: 4rem;
+        }
       }
 
-      .link-atividade {
-        font-weight: 400;
-        font-size: 1.8rem;
-        line-height: 2.5rem;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        text-decoration-line: underline;
-        margin-top: 3rem;
+      #seta-dir {
+        display: block;
+        width: 3rem;
+
+        &:hover{
+          width: 4rem;
+        }
+      }
+
+      .lista-empresas {
+        width: 100%;
+        .cards {
+          flex-direction: row;
+          padding: 0;
+          margin: 0 0 0 3rem;
+
+          .box-empresas {
+            width: 32rem;
+            padding: 0 2rem;
+
+            .info-empresa {
+              justify-content: center;
+            }
+          }
+
+          .link-atividade {
+            display: none;
+          }
+
+          .atividades-desktop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 71rem;
+            padding: 0 3rem 0 0;
+
+            h2 {
+              color: $color-texto;
+              font-size: 2.5rem;
+              font-weight: 700;
+              line-height: 3rem;
+              margin-bottom: 2rem;
+            }
+
+            p {
+              color: $color-subtexto;
+              font-weight: 500;
+              font-size: 1.8rem;
+              line-height: 3.5rem;
+              margin: 0;
+              text-align: justify;
+            }
+          }
+        }
       }
     }
   }
-
-}
-
-.atividades-mobile {
-  display: none;
-  font-weight: 700;
-  line-height: 3rem;
-
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-
-  h2 {
-    color: $color-texto;
-    font-size: 2rem;
-  }
-
-  p {
-    color: $color-subtexto;
-    font-size: 1.8rem;
-  }
-}
-
-.atividades-desktop {
-  display: none;
-  background-color: #000000b8;
-  position: absolute;
-  right: 6rem;
-  width: 31.5rem;
-  border: 3px solid;
-  border-radius: 1rem;
-  height: 60.5rem;
-  padding: 2rem;
 }
 
 .empresa-atual {
@@ -138,3 +217,9 @@
 .d-none {
   display: none;
 }
+
+#cards-carrousel {
+  display: flex;
+  position: relative;
+}
+

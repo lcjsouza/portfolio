@@ -2,7 +2,7 @@
 
 
 .footer {
-  height: 6rem;
+  height: 8rem;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -21,7 +21,7 @@
   }
 
   @include fromMediumLarge{
-    height: 8rem;
-    font-size: 2rem;
+    height: 11rem;
+    font-size: 2.5rem;
   }
 }
