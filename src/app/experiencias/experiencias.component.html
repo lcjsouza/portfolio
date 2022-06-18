@@ -1,33 +1,48 @@
 <div id="experiencias" class="box-experiencias">
   <h1 class="titulo">EXPERIÊNCIAS</h1>
-  <div class="lista-empresas">
-    <ng-container *ngFor="let empresas of listaEmpresas">
-      <div class="box-empresas">
-        <div class="info-empresa">
-          <img class="logo-empresas" [src]="empresas.logo" />
-          <h2 class="nome-empresa">{{ empresas.empresa }}</h2>
-          <div class="info-cargo">
-            <label>Cargo:</label>
-            <p>{{ empresas.cargo }}</p>
+  <div class="experiencias-flex">
+    <!-- Seta Esquerda -->
+    <svg id="seta-esq" viewBox="0 0 20 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.1943 33.0012L20 29.1237L7.63833 16.5012L20 3.87872L16.1943 0.00122037L1.44248e-06 16.5012L16.1943 33.0012Z" fill="#004987"/>
+    </svg>
+    <div class="lista-empresas">
+      <div id="cards-carrousel">
+        <ng-container *ngFor="let empresa of listaEmpresas; let i = index">
+          <div class="cards" id="empresa-{{i}}">
+            <div class="box-empresas">
+              <div class="info-empresa">
+                <img class="logo-empresas" [src]="empresa.logo" />
+                <h2 class="nome-empresa">{{ empresa.nome }}</h2>
+                <div class="info-cargo">
+                  <label>Cargo:</label>
+                  <p>{{ empresa.cargo }}</p>
+                </div>
+                <div class="info-cargo">
+                  <label>Período:</label>
+                  <p>{{ empresa.periodo }}</p>
+                </div>
+              </div>
+            </div>
+            <a (click)="verAtividade(empresa.nome)" id="verAtividades" class="link-atividade">Ver Atividade</a>       
+            <!-- Atividade Mobile -->
+            <div [id]="empresa.nome" class="atividades-mobile">
+              <h2>Atividades</h2>
+              <p>{{ empresa.atividades }}</p>
+            </div>
+              <!-- Atividade Desktop -->
+            <div class="atividades-desktop">
+              <h2>Atividades</h2>
+              <p>{{ empresa.atividades }}</p>
+            </div>
           </div>
-          <div class="info-cargo">
-            <label>Período:</label>
-            <p>{{ empresas.periodo }}</p>
-          </div>
-        </div>
-        <a  class="link-atividade">Ver Atividade</a>
-        <!-- Atividade Desktop -->
-        <div class="atividades-mobile">
-          <h2>Atividades</h2>
-          <p>{{ empresas.atividades }}</p>
-        </div>
+        </ng-container>
       </div>
-      <!-- Atividade Desktop -->
-      <div class="atividades-desktop">
-        <h2>Atividades</h2>
-        <p>{{ empresas.atividades }}</p>
-      </div>
-    </ng-container>
+    </div>
+    <!-- Seta Direita -->
+    <svg id="seta-dir" viewBox="0 0 20 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3.80567 0.0012207L0 3.87872L12.3617 16.5012L0 29.1237L3.80567 33.0012L20 16.5012L3.80567 0.0012207Z" fill="#004987"/>
+    </svg>
   </div>
 </div>
+
 

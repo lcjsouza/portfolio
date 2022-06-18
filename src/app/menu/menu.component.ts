@@ -11,30 +11,28 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
     this.menuMobile();
-    this.menuDesktop();
+    // this.menuDesktop();
   }
   menuMobile() {
     $('.icon-menu').click( () => {
       $('#icon-hamburger').toggleClass('icon-none');
       $('#icon-close').toggleClass('icon-none');
-      // $('.svg').toggleClass('menu-open');
       $('.menu-mobile').slideToggle('slow');
     });
 
     $('.ancoras').click( () => {
       $('#icon-hamburger').toggleClass('icon-none');
       $('#icon-close').toggleClass('icon-none');
-      // $('.svg').toggleClass('menu-open');
       $('.menu-mobile').slideToggle('slow');
     });
   }
 
-  menuDesktop() {
-    $('.menu-resultados').click( () => {
-      $('#seta-down').toggleClass('icon-none');
-      $('#seta-up').toggleClass('icon-none');
-      $('.menu-desktop-open').toggleClass('menu-open');
-      $('.menu-desktop-open').slideToggle('slow');
-    });
-  }
+  // menuDesktop() {
+  //   $('.menu-resultados').click( () => {
+  //     $('#seta-down').toggleClass('icon-none');
+  //     $('#seta-up').toggleClass('icon-none');
+  //     $('.menu-desktop-open').toggleClass('menu-open');
+  //     $('.menu-desktop-open').slideToggle('slow');
+  //   });
+  // }
 }

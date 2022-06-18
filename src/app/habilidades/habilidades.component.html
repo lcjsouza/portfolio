@@ -1,1 +1,8 @@
-<p>habilidades works!</p>
+<div id="habilidades" class="box-habilidade">
+  <h1 class="titulo">HABILIDADES</h1>
+  <div class="img-habilidade">
+    <ng-container *ngFor="let img of listaIcones">
+        <img class="imagem" [src]="img.src" />
+    </ng-container>
+  </div>
+</div>
