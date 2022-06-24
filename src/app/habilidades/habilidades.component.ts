@@ -1,3 +1,4 @@
+import { IMGS } from 'src/constants/imagens';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./habilidades.component.scss']
 })
 export class HabilidadesComponent implements OnInit {
+  imgHtml = IMGS.IMG_HTML;
+  imgCss = IMGS.IMG_CSS;
+  imgSass = IMGS.IMG_SASS;
+  imgAngular = IMGS.IMG_ANGULAR;
+  imgJavaScript = IMGS.IMG_JS;
+  imgTypeScript = IMGS.IMG_TS;
+  imgNode = IMGS.IMG_NODE;
+  imgBootstrap = IMGS.IMG_BOOTSTRAP;
+  imgJquery = IMGS.IMG_JQUERY;
+  imgDevops = IMGS.IMG_AZURE;
+  imgFigma = IMGS.IMG_FIGMA;
+  imgGit = IMGS.IMG_GIT;
+  imgScrum = IMGS.IMG_SCRUM;
+  imgBi = IMGS.IMG_POWERBI;
+  imgOracle = IMGS.IMG_ORACLE;
+  imgVba = IMGS.IMG_VBA;
+  imgWordpress = IMGS.IMG_WORDPRESS;
+  imgJava = IMGS.IMG_JAVA;
 
   constructor() { }
 
@@ -14,58 +33,58 @@ export class HabilidadesComponent implements OnInit {
 
   listaIcones = [
     {
-      src: '../../assets/img/HTML.png'
+      src: this.imgHtml
     },
     {
-      src: '../../assets/img/CSS.png'
+      src: this.imgCss
     },
     {
-      src: '../../assets/img/Sass.png'
+      src: this.imgSass
     },
     {
-      src: '../../assets/img/AngularJS.png'
+      src: this.imgAngular
     },
     {
-      src: '../../assets/img/JavaScript.png'
+      src: this.imgJavaScript
     },
     {
-      src: '../../assets/img/TypeScript.png'
+      src: this.imgTypeScript
     },
     {
-      src: '../../assets/img/NodeJs.png'
+      src: this.imgNode
     },
     {
-      src: '../../assets/img/Bootstrap.png'
+      src: this.imgBootstrap
     },
     {
-      src: '../../assets/img/Jquery.png'
+      src: this.imgJquery
     },
     {
-      src: '../../assets/img/AzureDevops.png'
+      src: this.imgDevops
     },
     {
-      src: '../../assets/img/Figma.png'
+      src: this.imgFigma
     },
     {
-      src: '../../assets/img/Git.png'
+      src: this.imgGit
     },
     {
-      src: '../../assets/img/Scrum.png'
+      src: this.imgScrum
     },
     {
-      src: '../../assets/img/PowerBi.png'
+      src: this.imgBi
     },
     {
-      src: '../../assets/img/Oracle.png'
+      src: this.imgOracle
     },
     {
-      src: '../../assets/img/VBA.png'
+      src: this.imgVba
     },
     {
-      src: '../../assets/img/Wordpress.png'
+      src: this.imgWordpress
     },
     {
-      src: '../../assets/img/Java.png'
+      src: this.imgJava
     }
   ]
 
