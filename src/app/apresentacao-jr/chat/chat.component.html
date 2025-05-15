@@ -1,0 +1,35 @@
+<div class="d-flex">
+  <div class="chat-header">
+    <img [src]="imgAi" alt="Assistente Dallara" class="avatar">
+    <div class="chat-info">
+      <h2>Dallara AI</h2>
+      <p>Seu assistente pessoal para esclarecer dúvidas sobre os projetos.</p>
+    </div>
+  </div>
+  
+  <div class="chat-wrapper">
+    <div class="chat-container">
+      <div *ngFor="let msg of messages" class="chat-bubble container-chat" [ngClass]="msg.from">
+        <ng-container *ngIf="msg.from === 'Dallara'">
+          <img [src]="imgAi" alt="Assistente Dallara" class="avatar-chat">
+        </ng-container>
+        <p [innerHTML]="msg.text"></p>
+      </div>
+      <ng-container *ngIf="loading">
+        <div class="container-chat">
+          <img [src]="imgAi" alt="Assistente Dallara" class="avatar-chat">
+          <div class="chat-bubble Dallara dots">
+            <span>.</span>
+            <span>.</span>
+            <span>.</span>
+          </div>
+        </div>
+      </ng-container>
+  
+      <div class="input-area">
+        <input [(ngModel)]="userInput" placeholder="Pergunte algo sobre os projetos..." />
+        <button (click)="sendMessage()">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
