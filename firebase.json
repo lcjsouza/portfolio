@@ -1,7 +1,6 @@
 {
   "hosting": {
-    "site": "luizcarlosjunior",
-    "public": "dist/portfolio",
+    "public": "dist/mfe-form",
     "ignore": [
       "firebase.json",
       "**/.*",
